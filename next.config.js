@@ -1,6 +1,7 @@
-module.exports = {
-  // i18n: {
-  //   locales: ['en', 'fr', 'nl'],
-  //   defaultLocale: 'en',
-  // },
-}
+const nextTranslate = require("next-translate");
+
+module.exports = nextTranslate({
+  webpack: (config, { isServer, webpack }) => {
+    return config;
+  },
+});
